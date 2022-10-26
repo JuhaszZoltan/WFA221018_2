@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.msMain = new System.Windows.Forms.MenuStrip();
-            this.újToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.keresésToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiUj = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiKereses = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiInfo = new System.Windows.Forms.ToolStripMenuItem();
             this.dgvMain = new System.Windows.Forms.DataGridView();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,32 +46,35 @@
             this.msMain.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.msMain.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.msMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.újToolStripMenuItem,
-            this.keresésToolStripMenuItem,
-            this.infoToolStripMenuItem});
+            this.tsmiUj,
+            this.tsmiKereses,
+            this.tsmiInfo});
             this.msMain.Location = new System.Drawing.Point(0, 0);
             this.msMain.Name = "msMain";
             this.msMain.Size = new System.Drawing.Size(678, 36);
             this.msMain.TabIndex = 0;
             this.msMain.Text = "menuStrip1";
             // 
-            // újToolStripMenuItem
+            // tsmiUj
             // 
-            this.újToolStripMenuItem.Name = "újToolStripMenuItem";
-            this.újToolStripMenuItem.Size = new System.Drawing.Size(45, 32);
-            this.újToolStripMenuItem.Text = "Új";
+            this.tsmiUj.Name = "tsmiUj";
+            this.tsmiUj.Size = new System.Drawing.Size(45, 32);
+            this.tsmiUj.Text = "Új";
+            this.tsmiUj.Click += new System.EventHandler(this.TsmiUj_Click);
             // 
-            // keresésToolStripMenuItem
+            // tsmiKereses
             // 
-            this.keresésToolStripMenuItem.Name = "keresésToolStripMenuItem";
-            this.keresésToolStripMenuItem.Size = new System.Drawing.Size(91, 32);
-            this.keresésToolStripMenuItem.Text = "Keresés";
+            this.tsmiKereses.Name = "tsmiKereses";
+            this.tsmiKereses.Size = new System.Drawing.Size(91, 32);
+            this.tsmiKereses.Text = "Keresés";
+            this.tsmiKereses.Click += new System.EventHandler(this.TsmiKereses_Click);
             // 
-            // infoToolStripMenuItem
+            // tsmiInfo
             // 
-            this.infoToolStripMenuItem.Name = "infoToolStripMenuItem";
-            this.infoToolStripMenuItem.Size = new System.Drawing.Size(60, 32);
-            this.infoToolStripMenuItem.Text = "Info";
+            this.tsmiInfo.Name = "tsmiInfo";
+            this.tsmiInfo.Size = new System.Drawing.Size(60, 32);
+            this.tsmiInfo.Text = "Info";
+            this.tsmiInfo.Click += new System.EventHandler(this.TsmiInfo_Click);
             // 
             // dgvMain
             // 
@@ -143,9 +146,9 @@
         #endregion
 
         private MenuStrip msMain;
-        private ToolStripMenuItem újToolStripMenuItem;
-        private ToolStripMenuItem keresésToolStripMenuItem;
-        private ToolStripMenuItem infoToolStripMenuItem;
+        private ToolStripMenuItem tsmiUj;
+        private ToolStripMenuItem tsmiKereses;
+        private ToolStripMenuItem tsmiInfo;
         private DataGridView dgvMain;
         private DataGridViewTextBoxColumn Column3;
         private DataGridViewTextBoxColumn Column1;

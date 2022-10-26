@@ -40,8 +40,23 @@ namespace WFA221018_2
         private void DgvMain_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             string szemelyId = dgvMain[0, e.RowIndex].Value.ToString();
-            _ = new FrmReszletek(szemelyId)
-                .ShowDialog();
+            _ = new FrmReszletek(szemelyId).ShowDialog();
+        }
+
+        private void TsmiUj_Click(object sender, EventArgs e)
+        {
+            _ = new FrmUj().ShowDialog();
+            Application.Restart();
+        }
+
+        private void TsmiKereses_Click(object sender, EventArgs e)
+        {
+            _ = new FrmKereses().ShowDialog();
+        }
+
+        private void TsmiInfo_Click(object sender, EventArgs e)
+        {
+            _ = new FrmInfo().ShowDialog();
         }
     }
 }
